@@ -1,3 +1,4 @@
+## General values
 debug:
   enabled: true
 cluster:
