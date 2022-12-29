@@ -16,3 +16,10 @@ This usage assumes:
 - `AWS_SECRET_ACCESS_KEY`
 
 4. Let the workspace run it's first plan
+
+## Notes
+
+**This code is not meant for production**
+
+- All tools at least use the latest patch, if not the latest minor, the automatically upgrade itself
+- The terraform runs aren't idempotent: each new run could upgrade an cluster addon or something else automatically (TF modules also use latest minor version)

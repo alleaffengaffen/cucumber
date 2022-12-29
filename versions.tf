@@ -1,4 +1,11 @@
 terraform {
+ backend "remote" {
+    organization = "alleaffengaffen"
+
+    workspaces {
+      name = "cucumber"
+    }
+  }
   required_version = ">= 1.3"
 
   required_providers {
