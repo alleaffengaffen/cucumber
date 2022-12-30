@@ -24,7 +24,7 @@ server:
                   - key: app.kubernetes.io/name
                     operator: Equals
                     value: argocd-server
-          topologyKey: topology.kubernetes.io/zone
+              topologyKey: topology.kubernetes.io/zone
   topologySpreadConstraints:
     - maxSkew: 0
       topologyKey: topology.kubernetes.io/zone

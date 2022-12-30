@@ -4,6 +4,7 @@ resource "helm_release" "cilium" {
   chart      = "cilium"
   version    = "1.12.x"
   namespace  = "kube-system"
+  wait = false
 
   values = [
     "${file("helm_values/cilium_values.yaml")}"
