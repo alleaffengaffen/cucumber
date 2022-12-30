@@ -17,6 +17,7 @@ annotateK8sNode: true
 policyEnforcementMode: "never"
 ingressController:
   enabled: true
+  enforceHttps: true
 containerRuntime:
   integration: containerd
   socketPath: /var/run/containerd/containerd.sock
