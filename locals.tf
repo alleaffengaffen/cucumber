@@ -11,7 +11,7 @@ locals {
   labels = {}
 
   taints = [
-    # will be removed by cilium once initalized
+    # will be removed by cilium once initialized
     {
       key    = "node.cilium.io/agent-not-ready"
       value  = "true"

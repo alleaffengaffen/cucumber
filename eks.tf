@@ -10,9 +10,10 @@ module "eks" {
     coredns = {
       most_recent = true
     }
-    kube-proxy = {
-      most_recent = true
-    }
+    # We're using cilium's kube-proxy replacement
+    # kube-proxy = {
+    #   most_recent = true
+    # }
     # We're using cilium's ENI integration
     # vpc-cni = {
     #   most_recent = true
