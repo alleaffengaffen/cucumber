@@ -10,7 +10,7 @@ resource "helm_release" "cilium" {
   ]
 
   depends_on = [
-    module.eks
+    module.eks.aws_eks_cluster
   ]
 }
 
