@@ -7,12 +7,12 @@
 #   chainingMode: aws-cni
 
 ## AWS ENI ipam values
-eni:
-  enabled: true
-ipam:
-  mode: eni
-egressMasqueradeInterfaces: eth0
-tunnel: disabled
+# eni:
+#   enabled: true
+# ipam:
+#   mode: eni
+# egressMasqueradeInterfaces: eth0
+# tunnel: disabled
 
 ## General values
 debug:
