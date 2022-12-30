@@ -1,10 +1,18 @@
 ## CNI Chaining values
-enableIPv4Masquerade: false
+# enableIPv4Masquerade: false
+# tunnel: disabled
+# endpointRoutes:
+#   enabled: false
+# cni:
+#   chainingMode: aws-cni
+
+## AWS ENI ipam values
+eni:
+  enabled: true
+ipam:
+  mode: eni
+egressMasqueradeInterfaces: eth0
 tunnel: disabled
-endpointRoutes:
-  enabled: false
-cni:
-  chainingMode: aws-cni
 
 ## General values
 debug:

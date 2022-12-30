@@ -13,16 +13,17 @@ module "eks" {
     kube-proxy = {
       most_recent = true
     }
-    vpc-cni = {
-      most_recent = true
-      configuration_values = jsonencode({
-        env = {
-          # Reference docs https://docs.aws.amazon.com/eks/latest/userguide/cni-increase-ip-addresses.html
-          ENABLE_PREFIX_DELEGATION = "true"
-          WARM_PREFIX_TARGET       = "1"
-        }
-      })
-    }
+    # We're using cilium's ENI integration
+    # vpc-cni = {
+    #   most_recent = true
+    #   configuration_values = jsonencode({
+    #     env = {
+    #       # Reference docs https://docs.aws.amazon.com/eks/latest/userguide/cni-increase-ip-addresses.html
+    #       ENABLE_PREFIX_DELEGATION = "true"
+    #       WARM_PREFIX_TARGET       = "1"
+    #     }
+    #   })
+    # }
   }
 
   vpc_id                   = module.vpc.vpc_id
